@@ -1,0 +1,27 @@
+/*primary colors*/
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$dark-grey: hsl(0, 0%, 55%);
+$very-dark-grey: hsl(0, 0%, 41%);
+
+// /*neutral colros*/
+// $white: hsl(0, 0%, 100%); // text
+// $grayish-blue:hsl(240, 2%, 79%); // footer text
+// $very-dark-grayish-blue: hsl(207, 13%, 34%); //body copy
+// $very-dark-black-blue: hsl(240, 10%, 16%); // footer background
+
+// /*gradients*/
+// $bg-gradient-intro:linear-gradient(left,hsl(13, 100%, 72%),hsl(353, 100%, 62%)); // intro cta mobile nav
+// $bg-gradient-body:linear-gradient(20deg,hsl(237, 17%, 21%),hsl(237, 23%, 32%)); //
+
+    
+/*typography*/
+$font-family-title: 'Josefin Sans', sans-serif;
+$font-family-body: 'Alata', sans-serif;
+$fw-300: 300;
+$fw-600: 600;
+$fw-400: 400;
+$fw-500: 500;
+$fw-700: 700;
+$fs-base:16px;
+// variables, typography, colors, buttons...
