@@ -1,0 +1,175 @@
+.header {
+    min-height: 100vh;
+    padding: 4rem 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../images/desktop/image-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mobile{
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../images/mobile/image-hero.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 30vh;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        &_logo{
+            @include mobile{
+                width: 40vw;
+            }
+        }
+
+        &_mobile_menu {
+            display: none;
+
+            @include mobile {
+                position: absolute;
+                right: .5vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                z-index: 105;
+
+                // .menu{
+                //     transform: translateX(100%);
+                // }
+                .close,
+                &.active .menu {
+                    display: none;
+
+                }
+
+                .menu,
+                &.active .close {
+                    display: block;
+                }
+            }
+        }
+
+        &_list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+
+            a {
+                position: relative;
+                color: white;
+                font-size: $fs-base+2px;
+                font-weight: $fw-500;
+                padding-bottom: 0.825rem;
+
+                @include mobile{
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    color: $dark-grey;
+                    font-size: x-large;
+                    letter-spacing: 2px;
+
+                }
+                &:hover, &:focus{
+                    @include mobile{
+                        color: white;
+                    }
+                }
+
+                
+
+                &::after {
+                    content: "";
+                    width: 0;
+                    height: 0.2rem;
+                    // border-radius: $radius;
+                    position: absolute;
+                    left: 1rem;
+                    bottom: 0;
+                    background-color: white;
+                    transition: width 200ms ease-in;
+
+                    @include mobile {
+                        display: none;
+                    }
+
+                }
+
+                &:hover::after {
+                    width: 50%;
+
+                }
+            }
+
+            .logo{
+                display: none;
+
+                @include mobile{
+                    display: block;
+                    width: 30vh;
+                margin-bottom: 6rem;
+                }
+                
+            }
+
+
+            @include mobile {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 0.5rem;
+
+                padding: 4rem 10vw;
+                width: 100vw;
+                height: 100vh;
+                
+                background-color:black;
+                z-index: 100;
+
+                
+                
+            }
+
+            &.active{
+                display: block;
+                @include desktop{
+                    display: none;
+                }
+            }
+
+        }
+    }
+
+    .welcome {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        h1 {
+            text-transform: uppercase;
+            padding: 2rem;
+            margin-top: 4rem;
+            border: 3px solid rgb(255, 255, 255);
+            color: white;
+            width: 60%;
+            font-weight: 400;
+            letter-spacing: 2px;
+
+            @include mobile{
+                width: 100%;
+                padding: 1rem;
+                border: px solid rgb(255, 255, 255);
+            }
+        }
+
+    }
+}
